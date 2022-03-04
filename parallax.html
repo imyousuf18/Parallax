@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax scrolling</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./pics/download.png">
+</head>
+<body>
+  <section>
+      <img src="./pics/bg.jpg" id="bg">
+      <h2 id="text">Mountain</h2>
+      <img src="./pics/man.png" id="man">
+      <img src="./pics/clouds_1.png" id="clouds_1">
+      <img src="./pics/clouds_2.png" id="clouds_2">
+      <img src="./pics/mountain_left.png" id="mountain_left">
+      <img src="./pics/mountain_right.png" id="mountain_right">
+  </section>
+  <div class="sec">
+      <h2>Welcome AbdulHadi</h2>
+      <p>An adventure is an exciting experience or undertaking that is typically bold, sometimes risky.[1] Adventures may be activities with some potential for physical danger such as traveling, exploring, skydiving, mountain climbing, scuba diving, river rafting or participating in extreme sports. Adventures are often undertaken to create psychological arousal or in order to achieve a greater goal such as the pursuit of knowledge that can only be obtained in a risky manner.<br><br>
+        Adventurous experiences create psychological arousal,[2] which can be interpreted as negative (e.g. fear) or positive (e.g. flow). For some people, adventure becomes a major pursuit in and of itself. According to adventurer André Malraux, in his La Condition Humaine (1933), "If a man is not ready to risk his life, where is his dignity?".
+        Outdoor adventurous activities are typically undertaken for the purposes of recreation or excitement: examples are adventure racing and adventure tourism. Adventurous activities can also lead to gains in knowledge, such as those undertaken by explorers and pioneers – the British adventurer Jason Lewis, for example, uses adventures to draw global sustainability lessons from living within finite environmental constraints on expeditions to share with schoolchildren. Adventure education intentionally uses challenging experiences for learning.<br><br>     
+    </p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+<script>
+
+gsap.to("#bg", {
+  scrollTrigger : {
+      scrub : 1
+  },
+  scale : 1.5
+})
+
+gsap.to("#man", {
+  scrollTrigger : {
+      scrub : 1
+  },
+  scale : 0.5
+})
+
+gsap.to("#mountain_left", {
+  scrollTrigger : {
+      scrub : 1
+  },
+  x : -500,
+})
+
+gsap.to("#mountain_right", {
+  scrollTrigger : {
+      scrub : 1
+  },
+  x : 500,
+})
+
+gsap.to("#clouds_1", {
+  scrollTrigger : {
+      scrub : 1
+  },
+  x : 200,
+})
+
+gsap.to("#clouds_2", {
+  scrollTrigger : {
+      scrub : 1
+  },
+  x : -200,
+})
+
+gsap.to("#text", {
+  scrollTrigger : {
+      scrub : 1
+  },
+  y : 500,
+})
+
+</script>
+
+</body>
+</html>
